@@ -61,7 +61,7 @@ const userCredits = async (req, res) => {
         const user = await userModel.findById(userId)
         res.json({ success: true, credits: user.creditBalance, user: { name: user.name } })
 
-    } catch (error) {
+    } catch (err) {
         console.log(err)
         res.json({ success: false, message: err.message })
     }

@@ -1,5 +1,2 @@
-
-node_modules
-envData.txt
-envData
 .env
+node_modules

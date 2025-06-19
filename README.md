@@ -63,13 +63,10 @@ SketchMe makes it fun and easy!
 - Premium content is available only to logged-in users
 
 ### 3. Razorpay Integration
-- Users can buy high-resolution, watermark-free downloads
-- After payment, the download is unlocked
+- Users can buy more number of tokens
+- After payement, token will be credited into their account
 - Backend validates payment using Razorpay’s webhook system
 
-### 4. User Dashboard
-- Logged-in users can view past generations
-- Saved images and prompts are listed from MongoDB
 
 ---
 

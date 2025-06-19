@@ -69,11 +69,11 @@ const userCredits = async (req, res) => {
     }
 }
 
-// const razorpayInstance = new razorpay({
-//     key_id: process.env.RAZORPAY_KEY_ID,
-//     key_secret: process.env.RAZORPAY_SECRET
-// })
-/*
+const razorpayInstance = new razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET
+})
+
 const paymentRazorpay = async (req, res) =>{
     try {
         const {planId, userId} = req.body
@@ -84,9 +84,9 @@ const paymentRazorpay = async (req, res) =>{
             return res.json({ success: false, message: "Missing Details" })
         }
 
-        let plan,credits,amount;
+        let plan,credits,amount,date;
 
-        switch (key) {
+        switch (planId) {
             case 'Basic':
                 plan='Basic'
                 credits = 100
@@ -165,6 +165,6 @@ const verifyPayment = async (req, res) => {
         
     }
 }
-*/
-export { registerUser, loginUser, userCredits}
-// export { registerUser, loginUser, userCredits,paymentRazorpay,verifyPayment }
+
+// export { registerUser, loginUser, userCredits}
+export { registerUser, loginUser, userCredits,paymentRazorpay,verifyPayment }

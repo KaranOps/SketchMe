@@ -2,3 +2,4 @@
 node_modules
 envData.txt
 envData
+.env

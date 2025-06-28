@@ -79,7 +79,7 @@ const paymentRazorpay = async (req, res) =>{
         const {planId, userId} = req.body
 
         const userData = await userModel.findById(userId)
-
+        console.log(planId)
         if(!userId || !planId){
             return res.json({ success: false, message: "Missing Details" })
         }
@@ -120,7 +120,7 @@ const paymentRazorpay = async (req, res) =>{
         const options={
             amount: amount*100,
             currency: process.env.CURRENCY,
-            recipt: newTransaction._id,
+            receipt: newTransaction._id,
         }
 
         await razorpayInstance.orders.create(options, (error, order)=>{
